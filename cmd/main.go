@@ -28,7 +28,6 @@ func form(w http.ResponseWriter, r *http.Request) {
 
 // running the server handling any errors and sending them to correct status code
 func serverHandler(w http.ResponseWriter, r *http.Request) {
-	// w.WriteHeader(http.StatusOK)
 
 	art, err := PKG.Text(r.FormValue("text"), r.FormValue("art"))
 	if err != nil {
@@ -63,7 +62,6 @@ func serverHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		err = f.ExecuteTemplate(w, "result.html", nil)
 		fmt.Fprintf(w, "<h1>This is ASCII web </h1>")
-		// fmt.Fprintf(w, r.FormValue("text"))
 		fmt.Fprintf(w, art)
 		if err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
@@ -93,13 +91,12 @@ func serverHandler(w http.ResponseWriter, r *http.Request) {
 // running the server
 func main() {
 	http.HandleFunc("/", serverHandler)
-	fmt.Println("Server is running")
+	fmt.Println("Server is running at localhost:8080")
 	// Create a file server for serving CSS files
 	styles := http.FileServer(http.Dir("../stylesheets"))
 	http.Handle("/stylesheets/", http.StripPrefix("/stylesheets/", styles))
 
 	err := http.ListenAndServe(":8080", nil)
-	// fmt.Println("Server is running")
 	if err != nil {
 		fmt.Printf("err: %v\n", err)
 		return
