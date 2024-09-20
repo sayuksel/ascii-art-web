@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <title>Ascii Art Web</title>
+</head>
+<body>
+        <div class="header">Ascii Art Web</div>
+        <main class="main_content">
+
+        <form action="ascii-art" method="POST">
+        <label for="text" class="sub_title">Enter Text Below</label><br>
+        <textarea name="text" id="text" rows="10" cols="36" class="text_area" maxlength="5000"></textarea>
+        <br>
+        <label for="text">Select Art Style <Style></Style></label><br>
+        <div class="options">
+        
+        <input type="radio" value="standard" name="art" id="standard" checked class="rdi_btns">
+        <label for="standard">Standard</label>
+  
+        <input type="radio"value="shadow" name="art" id="shadow" class="rdi_btns">
+        <label for="shadow">Shadow</label>
+
+        <input type="radio" value="thinkertoy" name="art" id="thinkertoy" class="rdi_btns">
+
+        <label for="thinkertoy">Thinkertoy</label>
+
+    </div>
+        <br>
+       <button class="btn_art">Make Art</button>
+      <!-- <input type="submit" value="Send">-->
+    </form>
+</main>
+</body>
+</html>
