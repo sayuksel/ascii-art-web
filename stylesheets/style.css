@@ -1,0 +1,57 @@
+
+.header{
+    text-align: center;
+    text-decoration:underline;
+    font-size: 3em;
+}
+body {
+    background-color: black;
+    color: rgb(65, 202, 243);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+.main_content{
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+    width: 100%;
+}
+/*text under the txt box*/
+.sub_title{
+    font-size: 1.5em;
+}
+.text_area{
+    background-color: rgb(65, 202, 243);
+    font-size: 1em;
+    margin-top: 1em;
+    width: 80vw;
+    font-family: "Pixelify Sans", sans-serif;
+
+}
+.options{
+    margin: 2em;
+    margin-left: 0;
+}
+.btn_art{
+    background-color: rgb(65, 202, 243);
+    font-family: "Pixelify Sans", sans-serif;
+    padding: 1em;
+    width: 30%;
+    border-radius: 1em;
+    cursor: pointer;
+}
+/*Error page 404*/
+.error{
+    font-family: "Pixelify Sans", sans-serif;
+    color: red;
+}
+
+
+
+.rdi_btns:checked + label {
+    color: red;
+}
+
