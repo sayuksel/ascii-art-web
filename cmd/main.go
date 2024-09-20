@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"path/filepath"
 
-	"web/PKG"
+	"web/pkg"
 )
 
 func form(w http.ResponseWriter, r *http.Request) {
